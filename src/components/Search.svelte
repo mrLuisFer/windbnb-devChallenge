@@ -4,7 +4,7 @@
 <div class="searchbar">
   <div>Helsinski, Finland</div>
   <div>Add Guests</div>
-  <div></div>
+  <div><span class="material-icons"> search </span></div>
 </div>
 
 <style type="text/scss" lang="scss">
