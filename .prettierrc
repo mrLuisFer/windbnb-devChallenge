@@ -1,0 +1,16 @@
+{
+  "svelteSortOrder": "options-scripts-markup-styles",
+  "svelteStrictMode": true,
+  "allowShorthand": true,
+  "svelteBracketNewLine": false,
+  "svelteAllowShorthand": false,
+  "svelteIndentScriptAndStyle": true,
+  "endOfLine": "lf",
+  "arrowParens": "always",
+  "semi": false,
+  "tabWidth": 2,
+  "trailingComma": "none",
+  "bracketSpacing": true,
+  "useTabs": false,
+  "singleQuote": true
+}
