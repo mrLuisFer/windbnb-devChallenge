@@ -2,19 +2,53 @@
 </script>
 
 <div class="searchbar">
-  <div>Helsinski, Finland</div>
-  <div>Add Guests</div>
-  <div><span class="material-icons"> search </span></div>
+  <div class="searchbar-content flex-center">
+    <p class="searchbar-content-text">Helsinski, Finland</p>
+  </div>
+  <div class="searchbar-content flex-center">
+    <p class="searchbar-content-text">Add Guests</p>
+  </div>
+  <div class="searchbar-search flex-center">
+    <span class="material-icons searchbar-search-icon"> search </span>
+  </div>
 </div>
 
-<style type="text/scss" lang="scss">
-  .searchbar {
+<style type="text/scss" lang="scss" scoped>
+  .flex-center {
     display: flex;
-    position: relative;
-    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .searchbar {
+    align-items: center;
     border-radius: var(--border-radius);
-    box-shadow: 0 1px 6px 0 rgba(#000000, 0.1);
-    width: 297px;
+    box-shadow: var(--default-shadow);
+    display: flex;
+    font-size: 14px;
     height: 55px;
+    justify-content: space-between;
+    margin: 0 auto;
+    position: relative;
+    width: 297px;
+
+    &-content {
+      border-right: 1.5px solid rgba(242, 242, 242, 1);
+      height: 100%;
+      padding: 0 15px;
+
+      &-text {
+        margin: 0;
+      }
+    }
+    &-search {
+      width: 36px;
+
+      &-icon {
+        color: var(--primary-red);
+        font-weight: 500;
+        cursor: pointer;
+      }
+    }
   }
 </style>
