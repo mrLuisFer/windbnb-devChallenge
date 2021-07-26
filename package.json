@@ -41,7 +41,9 @@
     "sirv-cli": "^1.0.0"
   },
   "lint-staged": {
-    "*.js, *.svelte": "eslint --cache --fix",
-    "*.{js,css,md,svelte}": "prettier --write"
-  }
+    "*.js, *.svelte, *.ts": "eslint --cache --fix",
+    "*.{js,css,md,svelte,ts}": "prettier --write"
+  },
+  "author": "mrLuisFer",
+  "license": "MIT"
 }
