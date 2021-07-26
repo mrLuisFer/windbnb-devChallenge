@@ -2,52 +2,71 @@
 </script>
 
 <div class="searchbar">
-  <div class="searchbar-content flex-center">
-    <p class="searchbar-content-text">Helsinski, Finland</p>
-  </div>
-  <div class="searchbar-content flex-center">
-    <p class="searchbar-content-text">Add Guests</p>
-  </div>
-  <div class="searchbar-search flex-center">
+  <input
+    type="text"
+    class="searchbar-input searchbar-input-city"
+    placeholder="Search city" />
+  <input
+    type="text"
+    class="searchbar-input searchbar-input-guests"
+    placeholder="Add guests" />
+  <div class="searchbar-search-btn">
     <span class="material-icons searchbar-search-icon"> search </span>
   </div>
 </div>
 
 <style type="text/scss" lang="scss" scoped>
-  .flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
   .searchbar {
     align-items: center;
     border-radius: var(--border-radius);
     box-shadow: var(--default-shadow);
     display: flex;
-    font-size: 14px;
     height: 55px;
-    justify-content: space-between;
     margin: 0 auto;
     position: relative;
     width: 300px;
 
-    &-content {
+    &-input {
       border-right: 1.5px solid rgba(242, 242, 242, 1);
+      border: none;
+      font-size: 14px;
+      font-weight: 400;
       height: 100%;
-      padding: 0 14px;
+      line-height: 18px;
+      outline: none;
+      padding-left: 12px;
 
-      &-text {
-        margin: 0;
+      &-city {
+        width: 138px;
+      }
+      &-guests {
+        width: 106px;
       }
     }
+
     &-search {
-      width: 36px;
+      &-btn {
+        align-items: center;
+        border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        cursor: pointer;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        position: relative;
+        transition: var(--transition);
+        width: 100%;
+
+        &:hover {
+          background: var(--primary-red);
+
+          & > span {
+            color: #eee;
+          }
+        }
+      }
 
       &-icon {
         color: var(--primary-red);
-        font-weight: 500;
-        cursor: pointer;
       }
     }
   }
