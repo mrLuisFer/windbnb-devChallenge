@@ -1,13 +1,15 @@
-<script>
+<script lang="typescript">
   import CardsLayout from './CardsLayout/CardsLayout.svelte'
+  import { stays } from '../api/stays'
+  const staysLength: number = stays.length
 </script>
 
 <section class="content">
   <div class="content-header">
     <h1 class="content-title">Stays in Finland</h1>
-    <p class="content-stays">12+ stays</p>
+    <p class="content-stays">{staysLength}+ stays</p>
   </div>
-  <CardsLayout />
+  <CardsLayout stays="{stays}" />
 </section>
 
 <style type="text/scss" lang="scss">

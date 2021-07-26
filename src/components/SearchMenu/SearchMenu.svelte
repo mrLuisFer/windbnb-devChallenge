@@ -2,9 +2,12 @@
   import Inputs from './Inputs.svelte'
   import Locations from './Locations.svelte'
   import Button from './Button.svelte'
+
+  export let showMenu
+  const menuClass = showMenu ? '' : 'hidde'
 </script>
 
-<div class="searchMenu">
+<div class="searchMenu {menuClass}">
   <div class="searchMenu-header">
     <p class="searchMenu-header-text">Edit your search</p>
     <span class="material-icons"> close </span>
@@ -35,5 +38,9 @@
         font-weight: 600;
       }
     }
+  }
+
+  .hidde {
+    display: none;
   }
 </style>

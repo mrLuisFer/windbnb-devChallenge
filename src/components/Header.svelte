@@ -3,7 +3,7 @@
 </script>
 
 <header class="header">
-  <img src="/images/logo.svg" alt="DevChallenges" />
+  <img src="/images/logo.svg" alt="DevChallenges" class="header-logo" />
 
   <div class="header-searchbar">
     <Searchbar />
@@ -15,6 +15,13 @@
     padding: var(--mobile-padding);
     display: flex;
     justify-content: space-between;
+
+    &-logo {
+      @media (min-width: 768px) {
+        width: 100px;
+        height: 20px;
+      }
+    }
 
     &-searchbar {
       display: none;
