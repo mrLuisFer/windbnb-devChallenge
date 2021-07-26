@@ -30,12 +30,12 @@
     justify-content: space-between;
     margin: 0 auto;
     position: relative;
-    width: 297px;
+    width: 300px;
 
     &-content {
       border-right: 1.5px solid rgba(242, 242, 242, 1);
       height: 100%;
-      padding: 0 15px;
+      padding: 0 14px;
 
       &-text {
         margin: 0;

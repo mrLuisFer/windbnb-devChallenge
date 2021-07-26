@@ -1,19 +1,9 @@
-<script lang="ts">
+<script lang="typescript">
   import type { Data } from '../../types/data'
 
   export let data: Data
 
-  const {
-    beds,
-    city,
-    country,
-    maxGuests,
-    photo,
-    rating,
-    superHost,
-    title,
-    type
-  } = data
+  const { city, beds, photo, rating, superHost, title, type } = data
 </script>
 
 <div class="card">
@@ -21,7 +11,7 @@
     class="card-img"
     src="{photo}"
     alt="{title}"
-    title="{title}"
+    title="{city} - {title}"
     loading="lazy" />
   <div class="card-details">
     <div class="card-details-content">
@@ -31,7 +21,7 @@
       {#if type.length > 0}
         <p class="card-details-type">
           {type}
-          {beds >= 2 && `. ${beds} beds`}
+          {beds >= 2 ? `. ${beds} beds` : ''}
         </p>
       {/if}
     </div>
