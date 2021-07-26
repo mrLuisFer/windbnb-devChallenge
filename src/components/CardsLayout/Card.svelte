@@ -1,16 +1,18 @@
-<script>
-  export let data
+<script lang="ts">
+  import type { Data } from '../../types/data'
+
+  export let data: Data
 
   const {
+    beds,
     city,
     country,
+    maxGuests,
+    photo,
+    rating,
     superHost,
     title,
-    rating,
-    maxGuests,
-    type,
-    beds,
-    photo
+    type
   } = data
 </script>
 
