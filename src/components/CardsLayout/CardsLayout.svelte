@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { stays } from '../../api/stays'
   import Card from './Card.svelte'
 

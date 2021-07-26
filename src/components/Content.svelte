@@ -13,6 +13,7 @@
 <style type="text/scss" lang="scss">
   .content {
     padding: 1rem 0.9rem;
+    margin-top: 37px;
 
     &-header {
       display: flex;
@@ -29,7 +30,7 @@
     &-stays {
       font-size: 14px;
       font-weight: 500;
-      color: rgba(79, 79, 79, 1);
+      color: var(--secondary-text-color);
     }
   }
 </style>
