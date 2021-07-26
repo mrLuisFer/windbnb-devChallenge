@@ -26,21 +26,46 @@
     position: relative;
     width: 300px;
 
+    @media (min-width: 768px) {
+      width: 450px;
+    }
+
+    @media (min-width: 1024px) {
+      width: 300px;
+    }
+
     &-input {
-      border-right: 1.5px solid rgba(242, 242, 242, 1);
       border: none;
+      border-right: 1.5px solid rgba(242, 242, 242, 1);
       font-size: 14px;
       font-weight: 400;
       height: 100%;
-      line-height: 18px;
       outline: none;
       padding-left: 12px;
+      margin-bottom: -0.8px;
+      border-radius: var(--border-radius) 0 0 var(--border-radius);
 
       &-city {
-        width: 138px;
+        width: 128px;
+
+        @media (min-width: 768px) {
+          width: 208px;
+        }
+
+        @media (min-width: 1024px) {
+          width: 128px;
+        }
       }
       &-guests {
         width: 106px;
+
+        @media (min-width: 768px) {
+          width: 176px;
+        }
+
+        @media (min-width: 1024px) {
+          width: 106px;
+        }
       }
     }
 

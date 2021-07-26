@@ -6,7 +6,7 @@
   const { city, beds, photo, rating, superHost, title, type } = data
 </script>
 
-<div class="card">
+<article class="card">
   <img
     class="card-img"
     src="{photo}"
@@ -26,16 +26,20 @@
       {/if}
     </div>
     <p class="card-rating">
-      <span class="material-icons card-rating-star-icon"> star_rate </span>
+      <span class="material-icons card-rating-star-icon" title="{rating} Stars">
+        star_rate
+      </span>
       {rating}
     </p>
   </div>
   <p class="card-title">{title}</p>
-</div>
+</article>
 
 <style type="text/scss" lang="scss">
   .card {
     margin: 35px 0;
+    display: block;
+    max-width: 350px;
 
     &-img {
       border-radius: var(--border-radius);

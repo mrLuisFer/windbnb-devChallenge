@@ -12,7 +12,7 @@
 
 <style type="text/scss" lang="scss">
   .content {
-    padding: 1rem 0.9rem;
+    padding: var(--mobile-padding);
     margin-top: 37px;
 
     &-header {

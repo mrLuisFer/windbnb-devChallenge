@@ -6,12 +6,20 @@
 
 <main class="container">
   <Header />
-  <Searchbar />
+  <div class="searchbar-toHide">
+    <Searchbar />
+  </div>
   <Content />
 </main>
 
 <style type="text/scss" lang="scss">
   .container {
     display: block;
+  }
+
+  .searchbar-toHide {
+    @media (min-width: 1024px) {
+      display: none;
+    }
   }
 </style>
