@@ -7,11 +7,14 @@
     "dev": "rollup -c -w",
     "format": "npx prettier --write .",
     "start": "sirv public --no-clear",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "check": "npx svelte-check"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-node-resolve": "^11.0.0",
+    "@rollup/plugin-typescript": "8.2.3",
+    "@tsconfig/svelte": "^2.0.1",
     "eslint": "^7.31.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-standard": "^16.0.3",
@@ -30,13 +33,17 @@
     "rollup-plugin-svelte": "^7.0.0",
     "rollup-plugin-terser": "^7.0.0",
     "svelte": "^3.0.0",
-    "svelte-preprocess": "4.7.4"
+    "svelte-check": "2.2.3",
+    "svelte-preprocess": "4.7.4",
+    "typescript": "4.3.5"
   },
   "dependencies": {
     "sirv-cli": "^1.0.0"
   },
   "lint-staged": {
-    "*.js, *.svelte": "eslint --cache --fix",
-    "*.{js,css,md,svelte}": "prettier --write"
-  }
+    "*.js, *.svelte, *.ts": "eslint --cache --fix",
+    "*.{js,css,md,svelte,ts}": "prettier --write"
+  },
+  "author": "mrLuisFer",
+  "license": "MIT"
 }

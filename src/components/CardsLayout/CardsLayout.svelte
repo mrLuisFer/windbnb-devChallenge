@@ -5,7 +5,7 @@
   console.log(stays)
 </script>
 
-<div>
+<div class="cards-layout">
   {#each stays as room}
     <Card data="{room}" />
   {/each}

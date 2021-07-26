@@ -1,22 +1,41 @@
-<script>
-  export let data
+<script lang="ts">
+  import type { Data } from '../../types/data'
+
+  export let data: Data
 
   const {
+    beds,
     city,
     country,
+    maxGuests,
+    photo,
+    rating,
     superHost,
     title,
-    rating,
-    maxGuests,
-    type,
-    beds,
-    photo
+    type
   } = data
 </script>
 
 <div class="card">
-  <img src="{photo}" alt="{title}" title="{title}" />
+  <img
+    class="card-img"
+    src="{photo}"
+    alt="{title}"
+    title="{title}"
+    loading="lazy" />
+  <div class="card-details">
+    {#if superHost}
+      <p>super host</p>
+    {/if}
+  </div>
 </div>
 
 <style type="text/scss" lang="scss">
+  .card {
+    &-img {
+      width: 350px;
+      height: 238px;
+      border-radius: var(--border-radius);
+    }
+  }
 </style>
