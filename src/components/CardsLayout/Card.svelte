@@ -29,7 +29,10 @@
         <div class="card-details-superhost"><p>super host</p></div>
       {/if}
       {#if type.length > 0}
-        <p class="card-details-type">{type}</p>
+        <p class="card-details-type">
+          {type}
+          {beds >= 2 && `. ${beds} beds`}
+        </p>
       {/if}
     </div>
     <p class="card-rating">
@@ -37,16 +40,19 @@
       {rating}
     </p>
   </div>
+  <p class="card-title">{title}</p>
 </div>
 
 <style type="text/scss" lang="scss">
   .card {
-    margin: 32px 0;
+    margin: 35px 0;
 
     &-img {
       border-radius: var(--border-radius);
       height: 238px;
       width: 350px;
+      margin-bottom: 13px;
+      object-fit: cover;
     }
 
     &-details {
@@ -56,6 +62,8 @@
 
       &-content {
         display: flex;
+        align-items: center;
+        column-gap: 11px;
       }
 
       &-superhost {
@@ -89,10 +97,18 @@
       display: flex;
       font-size: 12px;
       color: var(--secondary-text-color);
+      font-weight: 500;
 
       &-star-icon {
         color: var(--primary-red);
+        margin-right: 4px;
       }
+    }
+
+    &-title {
+      font-size: 14px;
+      margin-top: 10px;
+      font-weight: 600;
     }
   }
 </style>
