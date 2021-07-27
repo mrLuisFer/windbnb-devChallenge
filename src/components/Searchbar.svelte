@@ -1,11 +1,22 @@
 <script>
+  import { setContext } from 'svelte'
+
+  /**
+   * @type {string}
+   */
+  let cityInputValue = ''
+
+  setContext('cityInputValue', cityInputValue)
+
+  console.log(cityInputValue)
 </script>
 
 <div class="searchbar">
   <input
     type="text"
     class="searchbar-input searchbar-input-city"
-    placeholder="Search city" />
+    placeholder="Search city"
+    bind:value="{cityInputValue}" />
   <input
     type="text"
     class="searchbar-input searchbar-input-guests"
@@ -94,6 +105,7 @@
 
       &-icon {
         color: var(--primary-red);
+        user-select: none;
       }
     }
   }

@@ -90,10 +90,17 @@
         padding: 7px;
         text-align: center;
         text-transform: uppercase;
+        transition: var(--transition);
+
+        &:hover {
+          background: var(--secondary-text-color);
+          color: #fff;
+        }
 
         p {
           margin: 0;
           line-height: 1px;
+          font-weight: 600;
         }
       }
 

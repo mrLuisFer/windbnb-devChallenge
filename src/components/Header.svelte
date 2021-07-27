@@ -3,7 +3,11 @@
 </script>
 
 <header class="header">
-  <img src="/images/logo.svg" alt="DevChallenges" class="header-logo" />
+  <img
+    src="/images/logo.svg"
+    alt="DevChallenges"
+    class="header-logo"
+    draggable="false" />
 
   <div class="header-searchbar">
     <Searchbar />
@@ -20,6 +24,11 @@
       @media (min-width: 768px) {
         width: 100px;
         height: 20px;
+      }
+
+      @media (min-width: 1024px) {
+        height: auto;
+        margin: auto 0;
       }
     }
 
