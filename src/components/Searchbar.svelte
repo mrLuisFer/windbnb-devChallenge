@@ -22,7 +22,7 @@
     box-shadow: var(--default-shadow);
     display: flex;
     height: 55px;
-    margin: 0 auto;
+    margin: 25px auto 0;
     position: relative;
     width: 300px;
 
@@ -32,6 +32,8 @@
 
     @media (min-width: 1024px) {
       width: 300px;
+      height: 40px;
+      margin: 0;
     }
 
     &-input {

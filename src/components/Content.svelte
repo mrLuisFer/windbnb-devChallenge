@@ -17,6 +17,10 @@
     padding: var(--mobile-padding);
     margin-top: 37px;
 
+    @media (min-width: 768px) {
+      padding: var(--tablet-padding);
+    }
+
     &-header {
       display: flex;
       justify-content: space-between;

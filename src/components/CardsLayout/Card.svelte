@@ -37,9 +37,18 @@
 
 <style type="text/scss" lang="scss">
   .card {
-    margin: 35px 0;
+    margin: 35px auto;
     display: block;
     max-width: 350px;
+
+    @media (min-width: 750px) {
+      width: 300px;
+      margin: 35px 0;
+    }
+
+    @media (min-width: 1020px) {
+      width: 350px;
+    }
 
     &-img {
       border-radius: var(--border-radius);
@@ -47,6 +56,15 @@
       width: 350px;
       margin-bottom: 13px;
       object-fit: cover;
+
+      @media (min-width: 750px) {
+        width: 300px;
+      }
+
+      @media (min-width: 1020px) {
+        width: 350px;
+        height: 250px;
+      }
     }
 
     &-details {
@@ -66,7 +84,7 @@
         border: 1px solid var(--secondary-text-color);
         color: var(--secondary-text-color);
         display: inline-flex;
-        font-size: 0.8rem;
+        font-size: 10px;
         font-weight: 600;
         height: 25px;
         padding: 7px;
@@ -82,7 +100,7 @@
       &-type {
         color: var(--text-gray);
         font-weight: 400;
-        font-size: 14px;
+        font-size: 12px;
       }
     }
 
