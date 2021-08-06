@@ -4,24 +4,20 @@
   import Card from './Card.svelte'
 
   export let stays: Array<Data>
-  console.log(stays)
 
   // const inputCity: string = 'Helsinki'
   let inputCity: string = ''
-  let inputContext: string = getContext('cityInputValue')
-
-  if (inputContext !== undefined) {
-    inputCity = inputContext
-  }
-
   console.log(inputCity)
-  const staysFiltered = stays.filter((city: Data) => city.city === inputCity)
+
+  let staysFiltered = stays.filter(
+    ({ city }: Data) => city.indexOf(inputCity) !== -1
+  )
 
   console.log(staysFiltered)
 </script>
 
 <div class="cards-layout">
-  {#each stays as room}
+  {#each staysFiltered as room}
     <Card data="{room}" />
   {/each}
 </div>

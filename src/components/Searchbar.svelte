@@ -1,18 +1,14 @@
-<script>
-  import { setContext } from 'svelte'
-  import { writable } from 'svelte/store'
+<script lang="typescript">
   /**
    * @type {string}
    */
-  let cityInputValue
-  let writableValue = writable(cityInputValue)
 
-  setContext('cityInputValue', writableValue)
-
-  const handleChangeCityInput = (e) => {
+  let cityInputValue: string = ''
+  const handleCityInput = (e: any) => {
     cityInputValue = e.target.value
   }
-  console.log(cityInputValue)
+
+  $: console.log(cityInputValue)
 </script>
 
 <div class="searchbar">
@@ -21,7 +17,7 @@
     class="searchbar-input searchbar-input-city"
     placeholder="Search city"
     bind:value="{cityInputValue}"
-    on:change="{handleChangeCityInput}" />
+    on:input="{handleCityInput}" />
   <input
     type="text"
     class="searchbar-input searchbar-input-guests"

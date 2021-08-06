@@ -121,6 +121,11 @@
       &-star-icon {
         color: var(--primary-red);
         margin-right: 4px;
+        transition: var(--transition);
+
+        &:hover {
+          filter: brightness(1.3);
+        }
       }
     }
 
