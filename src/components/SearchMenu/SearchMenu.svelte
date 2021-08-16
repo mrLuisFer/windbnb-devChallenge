@@ -1,16 +1,24 @@
 <script lang="typescript">
+  import { getContext } from 'svelte'
   import Inputs from './Inputs.svelte'
   import Locations from './Locations.svelte'
   import Button from './Button.svelte'
 
-  export let showMenu
-  const menuClass = showMenu ? '' : 'hidde'
+  let { value } = getContext('showMenu')
+
+  const menuClass = !value && 'hidde'
+
+  const closeMenu = () => {
+    console.log('closing')
+    value = false
+    console.log(value)
+  }
 </script>
 
 <div class="searchMenu {menuClass}">
   <div class="searchMenu-header">
     <p class="searchMenu-header-text">Edit your search</p>
-    <span class="material-icons"> close </span>
+    <span class="material-icons" on:click="{closeMenu}"> close </span>
   </div>
   <Inputs />
   <Locations />

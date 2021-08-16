@@ -1,10 +1,16 @@
 <script lang="typescript">
+  import { setContext } from 'svelte'
   import Header from '../components/Header.svelte'
   import Searchbar from '../components/Searchbar.svelte'
   import Content from '../components/Content.svelte'
   import SearchMenu from '../components/SearchMenu/SearchMenu.svelte'
 
-  let showMenu = false
+  let showMenu
+  $: showMenu = true
+
+  setContext('showMenu', {
+    value: showMenu
+  })
 </script>
 
 <SearchMenu showMenu="{showMenu}" />
