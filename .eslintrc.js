@@ -2,7 +2,7 @@ const rules = {
   off: 'off',
   warn: 'warn',
   error: 'error'
-}
+};
 
 module.exports = {
   env: {
@@ -17,7 +17,7 @@ module.exports = {
   },
   plugins: ['svelte3'],
   rules: {
-    semi: rules.off,
+    semi: [rules.warn, 'always'],
     eqeqeq: rules.error
   },
   overrides: [
@@ -26,4 +26,4 @@ module.exports = {
       processor: 'svelte3/svelte3'
     }
   ]
-}
+};
